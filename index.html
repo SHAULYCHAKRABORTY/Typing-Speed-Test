@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Typing Speed Test</h1>
+
+        <div class="level-selection">
+            <button class="level-btn" onclick="setLevel('beginner')">Beginner</button>
+            <button class="level-btn" onclick="setLevel('intermediate')">Intermediate</button>
+            <button class="level-btn" onclick="setLevel('pro')">Pro</button>
+        </div>
+
+        <div id="test-area">
+            <p id="sentence" class="shadow"></p>
+            <input type="text" id="input-field" autocomplete="off" placeholder="Start typing...">
+            <div id="feedback"></div>
+        </div>
+
+        <div id="stats-bar">
+            <p id="time">Time: 60s</p>
+            <p id="score">WPM: 0</p>
+            <p id="accuracy">Accuracy: 0%</p>
+        </div>
+
+        <div class="options-bar">
+            <button id="start-button" onclick="startTest()">Start</button>
+            <button id="theme-button" onclick="toggleTheme()">Switch Theme</button>
+            <button id="audio-button" onclick="convertToAudio(currentSentence)">Play Sentence</button>
+
+        </div>
+        <div id="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+        </div>
+
+        <div id="history">
+            <h2>Last Sentence</h2>
+            <p id="last-sentence"></p>
+            <p id="last-stats"></p>
+        </div>
+        <div id="animation-container" class="animation-container"></div> 
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
